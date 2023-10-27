@@ -1,0 +1,51 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --dark-blue: hsl(209, 23%, 22%); /*Dark Mode Elements*/
+  --very-dark-blue-bg: hsl(207, 26%, 17%); /*Dark Mode Background*/
+  --very-dark-blue-txt: hsl(200, 15%, 8%); /*Light Mode Text*/
+  --dark-gray: hsl(0, 0%, 52%); /*Light Mode Input*/
+  --very-light-gray: hsl(0, 0%, 98%); /*Light Mode Background*/
+  --white: hsl(0, 0%, 100%); /*Dark Mode Text & Light Mode Elements*/
+}
+
+/* semantic color variables for this project */
+:root{
+  --background-color: var(--very-light-gray);
+  --elements: var(--white);
+  --text-color: var(--very-dark-blue-txt);
+  --input: var(--dark-gray);
+
+  --hover-bg: var(--very-dark-blue-bg);
+  --hover-txt: var(--white);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--background-color);
+
+  &.dark{
+    --background-color: var(--very-dark-blue-bg);
+    --elements: var(--dark-blue);
+    --text-color: var(--white);
+    --input: var(--white);
+
+    --hover-bg: var(--white);
+    --hover-txt: var(--very-dark-blue-bg);
+  }
+}

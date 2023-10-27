@@ -1,0 +1,18 @@
+@import './function';
+@import './base.scss';
+
+.container{
+  max-width: calcRem(1440);
+  margin: 0 auto;
+  padding: 0 calcRem(20);
+}
+
+.shadow{
+  box-shadow: 21px 23px 40px rgba(0, 0, 0, 0.07);
+}
+
+@media screen and (min-width: calcRem(992)) {
+  .container{
+    padding: 0 calcRem(40);
+  }
+}
